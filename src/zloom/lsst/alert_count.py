@@ -8,7 +8,7 @@ def __init__():
     api_token = get_boom_token()
     return api_token
 
-def get_alert_counts(api_token: str) -> str:
+def _get_alert_counts(api_token: str, n_days: float) -> str:
 
     response = requests.post(
                             "https://api.kaboom.caltech.edu/queries/count",
@@ -18,7 +18,7 @@ def get_alert_counts(api_token: str) -> str:
                             },
                             json={
                             "catalog_name": "LSST_alerts",
-                            "filter": {"candidate.jd": {"$gt": Time.now().jd - 5}},
+                            "filter": {"candidate.jd": {"$gt": Time.now().jd - n_days}},
                             }
                         )
 
@@ -29,16 +29,19 @@ def get_alert_counts(api_token: str) -> str:
     n_alerts = response.json()["data"]
     return n_alerts
 
-def get_alert_count():
+def get_alert_count(n_days: float) -> str:
     api_token = __init__()
-    n_alerts = get_alert_counts(api_token)
-    print(f"Number of alerts in the last 24 hours: {n_alerts}")
+    n_alerts = _get_alert_counts(api_token, n_days)
+    if n_days == 1:
+        print(f"Number of alerts in the last day: {n_alerts}")
+    else:
+        print(f"Number of alerts in the last {n_days} days: {n_alerts}")
 
     return None
 
 
-def main():
-    n_alerts_last_night()
+def main(n_days: float = 1):
+    get_alert_count(n_days)
 
 if __name__ == "__main__":
-    main()
+    main(n_days)
