@@ -5,20 +5,7 @@
  ███╔╝  ██║     ██║   ██║██║   ██║██║╚██╔╝██║
 ███████╗███████╗╚██████╔╝╚██████╔╝██║ ╚═╝ ██║
 ╚══════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝
+
+#  Zloom - A python wrapper for BOOM api for playing with ZTF and LSST alerts
 ```
 
-____  _     ___   ___  __  __ 
- |_  / | |   / _ \ / _ \|  \/  |
-  / /  | |__| (_) | (_) | |\/| |
- /___| |____|\___/ \___/|_|  |_|
-
-
- ·.·.·.·.·.·.·.·.·.·.·.·.·.·.
-  ★  Z L O O M  ★
-   fast sky pipeline
-·.·.·.·.·.·.·.·.·.·.·.·.·.·.
-
-print(LOGO)
-print(f"Loading {len(all_filters.keys())} filters...")
-
- Zloom - a python wrapper for BOOM api for playing with ZTF and LSST alerts
