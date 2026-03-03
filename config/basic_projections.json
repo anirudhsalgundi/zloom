@@ -1,0 +1,52 @@
+{
+    "projection": {
+        "_id": 0,
+        "objectId": 1,
+        "candid": 1,
+
+        "candidate.candid": 1,
+        "candidate.jd": 1,
+        "candidate.fid": 1,
+        "candidate.band": 1,
+        
+        
+        
+        "candidate.ra": 1,
+        "candidate.dec": 1,
+        "candidate.magpsf": 1,
+        "candidate.sigmapsf": 1,
+        "candidate.magap": 1,
+        "candidate.sigmagap": 1,
+        
+        "fp_hists": 1,
+
+        "aliases.lsst": 1,
+        "aliases.decam": 1,
+
+        "LSST.prv_candidates.objectId": 1,
+        "LSST.prv_candidates.jd": 1,
+        "LSST.prv_candidates.magpsf": 1,
+        "LSST.prv_candidates.sigmapsf": 1,
+        "LSST.prv_candidates.band": 1,
+        "LSST.prv_candidates.snr": 1,
+        "LSST.prv_candidates.isdiffpos": 1,
+        "LSST.prv_candidates.ra": 1,
+        "LSST.prv_candidates.dec": 1,
+        "LSST.prv_candidates.psfFlux": 1,
+        "LSST.prv_candidates.psfFluxErr": 1,
+        "LSST.prv_candidates.ndethist": 1,
+        "LSST.prv_candidates.jdstarthist": 1,
+        "LSST.fp_hists.jd": 1,
+        "LSST.fp_hists.band": 1,
+        "LSST.fp_hists.psf_flux": 1,
+        "LSST.fp_hists.psf_flux_err": 1,
+        "LSST.fp_hists.magpsf": 1,
+        "LSST.fp_hists.sigmapsf": 1,
+        "LSST.fp_hists.snr": 1,
+        "LSST.fp_hists.isdiffpos": 1,
+
+        "cutoutScience": 1,
+        "cutoutTemplate": 1,
+        "cutoutDifference": 1
+    }
+}
