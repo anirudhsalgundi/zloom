@@ -39,8 +39,8 @@ step 2: set up your BOOM credentials in environment variables
 
 open bashrc or zshrc and add the following lines, replacing with your actual BOOM username and password:
 ```bash
-export BOOM_USERNAME=your_boom_username
-export BOOM_PASSWORD=your_boom_password
+export BOOM_USERNAME="your_boom_username"
+export BOOM_PASSWORD="your_boom_password"
 ```
 You are all set up to use the package! You can use the CLI commands to run the scripts.
 
