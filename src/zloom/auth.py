@@ -2,20 +2,14 @@ import json
 import requests
 import os
 
-def _load_boom_credentials(credentials_file_path: str = None):
+def _load_boom_credentials() -> str:
     
-    if credentials_file_path is None:
-        credentials_file_path = os.environ.get("BOOM_CREDENTIALS")
+    username, password = os.getenv("BOOM_USERNAME"), os.getenv("BOOM_PASSWORD")
+    if username and password:
+        return username, password
+    else:
+        raise RuntimeError("Boom credentials not found in environment variables.")
     
-    if credentials_file_path is None:
-        raise ValueError(
-            "No credentials file provided. Either pass it as an argument "
-            "or set the BOOM_CREDENTIALS environment variable."
-        )
-    
-    with open(credentials_file_path, "r") as file:
-        boom_config = json.load(file)
-    return boom_config["username"], boom_config["password"]
 
 
 def _authenticate_boom(username: str, password: str) -> str:
@@ -32,7 +26,6 @@ def _authenticate_boom(username: str, password: str) -> str:
 def get_boom_token(credentials_file_path: str = None) -> None:
     username, password = _load_boom_credentials()
     api_token = _authenticate_boom(username, password)
-    print(f"Authenticated successfully!!")
 
     return api_token
 
