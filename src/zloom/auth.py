@@ -23,7 +23,7 @@ def _authenticate_boom(username: str, password: str) -> str:
     else:
         raise RuntimeError(f"Login failed: {auth_response.status_code}")
 
-def get_boom_token(credentials_file_path: str = None) -> None:
+def get_boom_token() -> str:
     username, password = _load_boom_credentials()
     api_token = _authenticate_boom(username, password)
 
