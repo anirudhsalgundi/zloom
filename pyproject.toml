@@ -5,3 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+
+[project.scripts]
+zloom-scan-nightly = "zloom.scanning.nightly_scan:main"
+zloom-nalerts-lsst = "zloom.lsst.alert_count:main"
+zloom-nalerts-ztf = "zloom.ztf.alert_count:main"
+zloom-nalerts = "zloom.alert_count:main"
