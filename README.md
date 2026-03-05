@@ -6,12 +6,12 @@
 ███████╗███████╗╚██████╔╝╚██████╔╝██║ ╚═╝ ██║
 ╚══════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝
 
-#  Zloom - A python wrapper for BOOM api for playing with ZTF and LSST alerts
+Zloom - A python wrapper for analysis of ZTF and LSST alerts through BOOM/Babamul.
 ```
 
 step 0: clone the repository
 ```bash
-git clone
+git clone git@github.com:anirudhsalgundi/zloom.git
 ```
 
 step 1: install the package and required dependencies
