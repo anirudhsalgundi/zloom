@@ -5,3 +5,4 @@ uv.lock
 .DS_Store
 /src/zloom.egg-info
 _all_filters_local.py
+*pyc
